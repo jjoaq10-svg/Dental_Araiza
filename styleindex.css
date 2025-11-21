@@ -1,0 +1,130 @@
+/* --- 1. Variables y Animaciones Globales --- */
+:root {
+    --blue-primary: #007bff;
+    --blue-dark: #00274c;
+    --blue-light: #e6f0ff;
+    --text-color: #343a40;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a, button, .card {
+    transition: all 0.3s ease-in-out; 
+}
+
+
+.container-fluid.bg-light.text-center.py-5 {
+    background-color: var(--blue-light) !important;
+    color: var(--blue-dark);
+}
+
+.display-4 {
+    color: var(--blue-dark);
+}
+
+.navbar-brand {
+    font-weight: 900;
+    color: var(--blue-dark) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--text-color);
+}
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--blue-primary) !important;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.4); /* Efecto de resplandor azul */
+}
+
+.btn-primary {
+    background-color: var(--blue-primary) !important;
+    border-color: var(--blue-primary) !important;
+    position: relative; 
+    overflow: hidden;
+}
+
+/* Animación: Sombra de pulsación al pasar el ratón en el botón */
+.btn-primary:hover {
+    background-color: #0056b3 !important; /* Azul más oscuro al hover */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6); /* Sombra intensa */
+    transform: translateY(-2px); /* Se levanta ligeramente */
+}
+
+/* --- 3. Estilos de Tarjetas (Servicios) --- */
+
+.card {
+    border: 1px solid var(--blue-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 15px;
+}
+.card img{
+    height: 50%;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+/* Animación: Card se levanta y la imagen se agranda ligeramente */
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más grande */
+    transform: translateY(-8px); /* Se mueve hacia arriba */
+}
+
+.card-img-top {
+    /* Aseguramos que la transición sea solo para la imagen */
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Zoom sutil en la imagen al hacer hover en la tarjeta */
+}
+
+/* --- 4. Estilo de Footer --- */
+footer {
+    background-color: var(--blue-dark) !important; /* Fondo azul marino profundo */
+    color: #ffffff !important;
+}
+
+footer p {
+    margin: 0;
+}
+
+.fotos {
+    display: block;            
+    margin: 0 auto;            
+    max-width: 300px;             
+    height: auto;                
+}
+
+.About {
+    background-color: var(--blue-primary);
+    color: aliceblue;
+    display: flex;              
+    align-items: flex-end;     
+    gap: 20px;                 
+    padding: 20px;             
+    border-radius: 10px;        
+}
+
+.doctor {
+    height: auto;               
+    width: 200px;              
+    max-width: 40%;            
+    border-radius: 8px;         
+    object-fit: cover;          
+    display: block;
+}
+
+.About p {
+    flex: 1;                   
+    font-size: 1rem;
+    line-height: 1.5;           
+}
+
+
+
