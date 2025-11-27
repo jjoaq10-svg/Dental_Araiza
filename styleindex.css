@@ -15,15 +15,18 @@ a, button, .card {
 }
 
 
-
 .container-fluid.bg-light.text-center.py-5 {
+    height: 700px;
     background-color: var(--blue-light) !important;
     color: var(--blue-dark);
 }
 
 .display-4 {
     color: var(--blue-dark);
+    padding-top: 200px;
+    font-family:'Times New Roman', Times, serif;
 }
+
 
 .navbar-brand {
     font-weight: 900;
@@ -127,5 +130,45 @@ footer p {
     line-height: 1.5;           
 }
 
+/* Estilo pequeño para el botón */
+.btn-pequeno {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.btn-pequeno img {
+  width: 60px;
+  height: auto;
+}
+
+/* Animación de temblor al hacer hover */
+.btn-pequeno:hover {
+  animation: temblor 0.8s linear infinite;
+}
+
+
+@keyframes temblor {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+
+/* Animación de caída al hacer click */
+.btn-pequeno:active {
+  animation: caida 0.4s ease forwards;
+}
+
+@keyframes caida {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(10deg); }
+  100% { transform: translateY(50px) rotate(20deg); opacity: 0; }
+}
 
 
