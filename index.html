@@ -13,42 +13,43 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <!-- menu hamburgues a que dirije a secciones de la pagina o paginas externas como servicios   -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <p class="navbar-brand">Tu sonrisa Nuestra Preocupacion</p>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button><!--inicio del menu hamburguesa -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                    <li class="nav-item"><!--seccion saber mas dentro zona de una pequeña descripcion  de la pagina -->
                         <a class="nav-link" href="#mas">Saber Mas</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item"><!--seccion servicios es extencion fuera de la pagina -->
                         <a class="nav-link" href="servicio.html">Servicios</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item"><!--seccion contactanos zona de redes sociales dentro de la pagina -->
                         <a class="nav-link" href="#contactanos">Contactanos</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item"><!--seccion citas es extencion fuera de la pagina -->
                         <a class="nav-link" href="citas.html">Agendar Cita</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
+<!-- imagen de diente que redirije al resumen/saber mas es un boton que te envia allí  --->
     <div class="container-fluid bg-light text-center py-5">
         <h1 class="display-4">Dental Araiza</h1>
         <p class="lead"></p>
         <a href="#mas" class="btn btn-pequeno btn-lg"><img src="botton.png"></a>
     </div>
-
+<!--- tarjetas de imagenes de demostración  --->
     <div class="container my-5" id="services">
         <h2 class="text-center mb-4">Servicios</h2>
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card"> <!-- primera tarjeta  consulta de valoracion-->
                     <img src="https://tinyurl.com/2xsndt2h" class="card-img-top" alt="Service 1">
                     <div class="card-body">
                         <h5 class="card-title">CONSULTA DE VALORACION</h5>
@@ -56,7 +57,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card"> <!-- segunda tarjeta imagen de brackets-->
                     <img src="https://tinyurl.com/2daadvd9" class="card-img-top" alt="Service 2">
                     <div class="card-body">
                         <h5 class="card-title">BRACKETS</h5>
@@ -64,7 +65,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card"> <!-- tercera tarjeta imagen de protesis dental-->
                     <img src="https://tinyurl.com/4r7c37hk" class="card-img-top" alt="Service 3">
                     <div class="card-body">
                         <h5 class="card-title">PROTESIS DENTAL</h5>
@@ -73,14 +74,14 @@
             </div>
         </div>
     </div>
-
+<!--boton que dirije a servicios  --->
 <div class="d-flex justify-content-center my-5">
   <div class="card p-4 text-center">
     <a href="servicio.html" class="btn btn-primary">Saber más</a>
   </div>
 </div>
 
-
+<!-- pequeño Resumen del medico seccion saber mas --->
     <div id="mas">
         <div class="About">
             <img class="doctor" src="https://tinyurl.com/j8mm323s">
@@ -89,14 +90,14 @@
     </div>
     <br>
 <div id="demo" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicators/dots -->
+    <!-- botones par cambiar las imagenes del carrusel -->
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
         <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
     </div>
-    <!-- The slideshow/carousel -->
+    <!-- carrussel de imagenes  -->
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="carrusel1.jpg" alt="imagen1" class="d-block fotos">
@@ -112,16 +113,17 @@
             <img src="carrusel4.jpg" alt="imagen3" class="d-block fotos">
         </div>
     </div>
-    <!-- Left and right controls/icons -->
+    <!-- botones de cambio de imagenes derecho e izquierdo -->
+     <!--Derecho-->
     <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
-    </button>
+    </button> <!--Izquierdo-->
     <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" >
         <span class="carousel-control-next-icon"></span>
     </button>
 </div>
 
-
+<!--seccion  de contacto-->
 <div class="container my-5" id="contactanos">
   <h2 class="text-center mb-4">Contáctanos</h2>
   <div class="row text-center">
@@ -154,7 +156,7 @@
     </div>
   </div>
 </div>
-
+<!-- iframe que contiene una preview del local -->
 <div class="container my-5" id="ubicanos">
   <h2 class="text-center mb-4">📍 Ubícanos 📍</h2>
   <p class="text-center">
@@ -166,17 +168,10 @@
   </div>
 </div>
 
-
+<!--nothing-->
     <footer class="bg-light text-center py-4">
         <p>© 2025</p>
     </footer>
 </body>
 
 </html>
-
-
-
-
-
-
-
