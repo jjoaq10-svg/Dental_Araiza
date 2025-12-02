@@ -18,14 +18,30 @@ a, button, .card {
 .container-fluid.bg-light.text-center.py-5 {
     height: 700px;
     background-color: var(--blue-light) !important;
-    color: var(--blue-dark);
+    color: var(--blue-light);
+    background-image: url(principal.jpg);
+    background-size: cover;
 }
 
 .display-4 {
-    color: var(--blue-dark);
-    padding-top: 200px;
-    font-family:'Times New Roman', Times, serif;
+  color: var(--blue-light);
+  font-size: 7rem !important;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 200px;
+  animation: fadeInDown 1.5s ease-out;
 }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 .navbar-brand {
@@ -172,5 +188,6 @@ footer p {
   50% { transform: translateY(10px) rotate(10deg); }
   100% { transform: translateY(50px) rotate(20deg); opacity: 0; }
 }
+
 
 
