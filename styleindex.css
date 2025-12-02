@@ -20,7 +20,6 @@ a, button, .card {
     background-color: var(--blue-light) !important;
     color: var(--blue-light);
     background-image: url(principal.jpg);
-    background-size: cover;
 }
 
 .display-4 {
@@ -188,6 +187,7 @@ footer p {
   50% { transform: translateY(10px) rotate(10deg); }
   100% { transform: translateY(50px) rotate(20deg); opacity: 0; }
 }
+
 
 
 
