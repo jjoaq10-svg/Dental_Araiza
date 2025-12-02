@@ -31,7 +31,7 @@
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card shadow p-4">
-          <form action="mailto:185747@upslp.edu.mx" method="POST">
+          <form id="formCita">
             <!-- Nombre -->
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre completo</label>
@@ -86,6 +86,13 @@
               <button type="submit" class="btn btn-primary">Reservar Cita</button>
             </div>
           </form>
+          <!-- Mensajes -->
+          <div id="alerta" class="alert alert-danger mt-3 d-none" role="alert">
+            ⚠️ Por favor completa todos los campos obligatorios antes de continuar.
+          </div>
+          <div id="exito" class="alert alert-success mt-3 d-none" role="alert">
+            ✅ Tu cita ha sido registrada. Se abrirá WhatsApp para confirmar con la clínica.
+          </div>
         </div>
       </div>
     </div>
@@ -95,5 +102,50 @@
   <footer class="bg-light text-center py-4">
     <p>© 2025 Dental Araiza</p>
   </footer>
+
+  <!-- Script para WhatsApp con validación y mensaje de éxito -->
+  <script>
+    document.getElementById("formCita").addEventListener("submit", function(e) {
+      e.preventDefault(); // evita recargar la página
+
+      // Capturar valores
+      const nombre = document.getElementById("nombre").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const correo = document.getElementById("correo").value.trim();
+      const servicio = document.getElementById("servicio").value.trim();
+      const fecha = document.getElementById("fecha").value.trim();
+      const hora = document.getElementById("hora").value.trim();
+      const comentarios = document.getElementById("comentarios").value.trim();
+
+      // Validación
+      if (!nombre || !telefono || !correo || !servicio || !fecha || !hora) {
+        document.getElementById("alerta").classList.remove("d-none");
+        document.getElementById("exito").classList.add("d-none");
+        return;
+      } else {
+        document.getElementById("alerta").classList.add("d-none");
+      }
+
+      // Crear mensaje
+      let mensaje = `Quisiera agendar una cita del servicio de: ${servicio}, le envio mis datos en espera de mas informacion*%0A
+
+* Nombre: ${nombre}%0A
+* Teléfono: ${telefono}%0A
+* Correo: ${correo}%0A
+* Servicio: ${servicio}%0A
+* Fecha: ${fecha}%0A
+* Hora: ${hora}%0A
+* Comentarios: ${comentarios}`;
+
+      // Número fijo de la clínica (ejemplo: México +52)
+      const numero = "524443429550"; 
+
+      // Mostrar mensaje de éxito
+      document.getElementById("exito").classList.remove("d-none");
+
+      // Redirigir a WhatsApp
+      window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
+    });
+  </script>
 </body>
 </html>
