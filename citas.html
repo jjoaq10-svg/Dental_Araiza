@@ -127,15 +127,17 @@
       }
 
       // Crear mensaje
-      let mensaje = `Quisiera agendar una cita del servicio de: ${servicio}, le envio mis datos en espera de mas informacion*%0A
+      let mensaje = `Quisiera agendar una cita del servicio de: ${servicio}, le envío mis datos en espera de más información\n\n` +
+        `* Nombre: ${nombre}\n` +
+        `* Teléfono: ${telefono}\n` +
+        `* Correo: ${correo}\n` +
+        `* Servicio: ${servicio}\n` +
+        `* Fecha: ${fecha}\n` +
+        `* Hora: ${hora}\n` +
+        `* Comentarios: ${comentarios}`;
 
-* Nombre: ${nombre}%0A
-* Teléfono: ${telefono}%0A
-* Correo: ${correo}%0A
-* Servicio: ${servicio}%0A
-* Fecha: ${fecha}%0A
-* Hora: ${hora}%0A
-* Comentarios: ${comentarios}`;
+      // Codificar mensaje para URL
+      let mensajeCodificado = encodeURIComponent(mensaje);
 
       // Número fijo de la clínica (ejemplo: México +52)
       const numero = "5214442342715"; 
@@ -144,10 +146,8 @@
       document.getElementById("exito").classList.remove("d-none");
 
       // Redirigir a WhatsApp
-      window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
+      window.open(`https://wa.me/${numero}?text=${mensajeCodificado}`, "_blank");
     });
   </script>
 </body>
 </html>
-
-
